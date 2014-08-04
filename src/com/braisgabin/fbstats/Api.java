@@ -50,6 +50,9 @@ public class Api {
 				.addHeader("Authorization", "OAuth " + accessToken).build();
 
 		Response response = client.newCall(request).execute();
+		if (!response.isSuccessful()) {
+			throw new RuntimeException(response.body().string());
+		}
 		return mapper.readValue(response.body().byteStream(), clazz);
 	}
 }
