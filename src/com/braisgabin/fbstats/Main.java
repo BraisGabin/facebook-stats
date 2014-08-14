@@ -79,7 +79,7 @@ public class Main {
 	private void calcule(int maxPosts) throws IOException, InterruptedException {
 		final CsvWriter writer = new CsvWriter(new FileOutputStream(file));
 		Stack<Thread> threads = new Stack<Thread>();
-		FeedRequest feedRequest = api.download("https://graph.facebook.com/v2.0/" + groupId + "/feed?fields=message,from,id,comments.fields(id,message,like_count,from,created_time),likes.limit(100),created_time", FeedRequest.class);
+		FeedRequest feedRequest = api.download("https://graph.facebook.com/v2.1/" + groupId + "/feed?fields=message,from,id,comments.fields(id,message,like_count,from,created_time),likes.limit(100),created_time", FeedRequest.class);
 		threads.addAll(process(feedRequest.getTopics(), writer));
 
 		while (feedRequest.hasMore() && threads.size() <= maxPosts) {
