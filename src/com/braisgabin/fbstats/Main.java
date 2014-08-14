@@ -110,6 +110,13 @@ public class Main {
 		public CsvWriter(OutputStream out) throws UnsupportedEncodingException {
 			printStream = new PrintStream(out, true, "ISO-8859-1");
 			dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+			printStream.append("Thread id").append(",");
+			printStream.append("Is thread").append(",");
+			printStream.append("User name").append(",");
+			printStream.append("User id").append(",");
+			printStream.append("Date").append(",");
+			printStream.append("Lenght").append(",");
+			printStream.append("Likes").append("\n");
 		}
 
 		@Override
