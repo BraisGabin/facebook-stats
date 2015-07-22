@@ -40,7 +40,7 @@ public class Main {
 	public static void main(String[] args) {
 		final int argsCount = args.length;
 		if (argsCount != 3 && argsCount != 4) {
-			System.err.println("java fbstats <output_file_path> <fb_user_id_group_id_or_page_id> <fb_access_token> [max_posts]");
+			System.err.println("facebook-stats <output_file_path> <fb_user_id_group_id_or_page_id> <fb_access_token> [max_posts]");
 			System.out.println("If you want the stats for a user the access token must have the \"read_stream\" permission.");
 			System.out.println("If you want the stats for a close or private group the access token must have the \"user_groups\" permission.");
 			return;
