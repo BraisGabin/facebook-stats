@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+version = '1.0.1'
+mainClassName = 'com.braisgabin.fbstats.Main'
+
+jar {
+  manifest {
+    attributes 'Implementation-Title': "Facebook Stats",
+               'Implementation-Verion': version,
+               'Implementation-Vendor': "Brais Gabín",
+               'Main-Class': mainClassName
+  }
+}
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+  compile 'com.fasterxml.jackson.core:jackson-core:2.4.0'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.4.0'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.0'
+  compile 'com.squareup.okhttp:okhttp:2.0.0'
+  compile 'com.squareup.okio:okio:1.0.0'
+}
