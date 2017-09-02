@@ -42,7 +42,7 @@ There are different ways to get an access token but one of the easiest ones is u
 2. Click at `Get Token > Get Access`,
 3. Click the permissions you want to grant, remember:
  - If you want the stats for a user the access token must have the `read_stream` permission.
- - If you want the stats for a close or private group the access token must have the `user_groups` permission.
+ - If you want the stats for a close or private group the access token must have the `user_managed_groups` permission and you must be admin.
 4. Click at `Get Access Token`.
 5. Copy the Access Token that appears at the top of the page. It's a very long with lettera and numbers.
 
